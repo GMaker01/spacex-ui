@@ -1,7 +1,7 @@
 # A basic redirects rule
 [[redirects]]
-  from = "https://focused-volhard-4938ca.netlify.com/*"
-  to = "https://crownstack.itsshubham.com/:splat"
+  from = "https://stoic-thompson-eb041f.netlify.app/*"
+  to = "https://sapient.itsshubham.com/:splat"
   status = 301
 [[redirects]]
   from = "/*"

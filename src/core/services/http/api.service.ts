@@ -3,7 +3,7 @@ import { environment } from '../../../environments/environment';
 import { HttpClient, HttpRequest, HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError, tap, filter } from 'rxjs/operators';
-import * as qs from 'qs';
+import { stringify } from 'qs';
 // import { LocalStorageService } from './local-storage.service';
 
 const API_URL = environment.backendUrl;
@@ -29,7 +29,7 @@ export class ApiService {
             );
         }
 
-        params = qs.stringify(params);
+        params = stringify(params);
         return this.http.get(API_URL + '/' + url + '?' + params).pipe(
             catchError((err: HttpErrorResponse) => {
                 throw err;
