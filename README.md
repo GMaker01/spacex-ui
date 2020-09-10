@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
+## Understanding
+
+Need to show list of all the SpaceX launches. Approach:
+1. Responsive Mobile First Approach
+2. Api with Interceptors
+3. Loader when Api is called
+4. Multi Level filter: launch_success, land_success, launch_year
+5. Data Parsing: land_success is checked from `rocket.first_stage`
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

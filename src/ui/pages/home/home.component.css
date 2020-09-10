@@ -9,28 +9,12 @@
   background-color: #fafafa;
   display: inline-block;
   padding: 25px;
-  margin: 5% 0%;
+  margin: 0 0% 5% 0%;
   align-items: center;
   transition: all 0.2s ease-in-out;
   line-height: 24px;
-}
-.card {
-  /* border-radius: 4px;
-  border: 1px solid #eee;
-  background-color: #fafafa; */
-  /* width: 20%; */
-  /* margin: 0 8px 16px;
-  display: inline-block;
-  padding: 16px;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  line-height: 24px; */
-  /* height: 40px; */
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center; */
-}
 
+}
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -53,7 +37,8 @@
 }
 
 .card img {
-  width: 100%;
+    background-color: #f5f5f5;
+    width: 100%;
 }
 
 .purple{
@@ -68,11 +53,11 @@
 @media only screen and (min-width: 700px) and (max-width: 1024px) {
   /* For tablets: */
   .card {
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #eee;
     background-color: #fafafa;
     display: inline-block;
-    margin: 20px 2%;
+    margin: 0 2% 20px 2%;
     width: 45%;
     align-items: center;
     transition: all 0.2s ease-in-out;
@@ -82,10 +67,10 @@
 @media only screen and (min-width: 1024px) {
   /* For desktop: */
   .card {
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #eee;
     background-color: #fafafa;
-    margin: 20px 2%;
+    margin: 0 2% 50px 2%;
     width: 20%;
     display: inline-block;
     padding: 25px;
@@ -93,4 +78,12 @@
     transition: all 0.2s ease-in-out;
     line-height: 24px;
   }
+}
+
+
+.dFlex {
+    display: flex ;
+    justify-content: center;
+    align-items: center ;
+    margin: 10px 0px;
 }

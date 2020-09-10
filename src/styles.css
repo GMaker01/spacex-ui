@@ -41,6 +41,9 @@ p {
 
 .row{
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1024px) {
@@ -72,4 +75,11 @@ p {
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
+}
+
+@media (min-width:1440px){
+    .col-big {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 }

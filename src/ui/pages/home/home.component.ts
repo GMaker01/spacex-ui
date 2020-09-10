@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/core/services/http';
 import { IFilter } from 'src/core/model/IFilter';
 import { IResponse } from 'src/core/model/IResponse';
-import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
     selector: 'app-home',
@@ -11,12 +10,11 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class HomeComponent implements OnInit {
 
-    data: Array<IResponse> = [];
+    launchData: Array<IResponse> = [];
     collapedSideBar: boolean;
 
     constructor(
-        private api: ApiService,
-        private spinner: NgxSpinnerService
+        private api: ApiService
     ) { }
 
     ngOnInit(): void {
@@ -28,12 +26,9 @@ export class HomeComponent implements OnInit {
     }
 
     getData(event: IFilter = {} as IFilter): void {
-        this.spinner.show();
         this.api.get('launches', { ...event, limit: 100 }).subscribe((data: Array<IResponse>) => {
-            this.spinner.hide();
-            this.data = data;
+            this.launchData = data;
         }, error => {
-            this.spinner.hide();
             console.error('error', error);
         });
     }

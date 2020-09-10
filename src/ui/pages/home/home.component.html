@@ -1,23 +1,37 @@
-<app-header></app-header>
-<app-filter (filterChangeEvent)="recieveFilters($event)"></app-filter>
-<section class="col-10 col-s-9 main-section">
-    <div class="row">
-        <div class="col-3 col-s-6 card" *ngFor="let data of data">
-            <img [src]="data.links.mission_patch_small" alt="Image">
-            <div class="container">
-                <h3 class="bold purple">{{data.mission_name}} #{{data.flight_number}}</h3>
-                <p><span class="bold">Mission Ids:</span></p>
-                <ul>
-                    <li *ngFor="let missions of data.mission_id">
-                        <span class="purple">{{missions}}</span>
-                    </li>
-                </ul>
-                <p><span class="bold">Successful Launch: </span><span class="purple">{{data.launch_success}}</span></p>
-                <p><span class="bold">Successful Landing: </span><span class="purple">{{isLandSuccessful(data)}}</span>
-                </p>
-            </div>
-        </div>
-    </div>
+<div class="col-big">
+    <app-header></app-header>
+    <app-filter (filterChangeEvent)="recieveFilters($event)"></app-filter>
+    <section class="col-10 col-s-9 main-section">
+        <div class="row">
 
-</section>
-<app-footer></app-footer>
+            <ng-container *ngIf="launchData && launchData.length>0; else showNoData">
+                <div class="col-3 col-s-6 card" *ngFor="let data of launchData">
+                    <img [src]="data.links.mission_patch_small" alt="Image">
+                    <div class="container">
+                        <h3 class="bold purple">{{data.mission_name}} #{{data.flight_number}}</h3>
+                        <p><span class="bold">Mission Ids:</span></p>
+                        <ul>
+                            <li *ngFor="let missions of data.mission_id">
+                                <span class="purple">{{missions}}</span>
+                            </li>
+                        </ul>
+                        <p><span class="bold">Successful Launch: </span><span
+                                class="purple">{{data.launch_success}}</span>
+                        </p>
+                        <p><span class="bold">Successful Landing: </span><span
+                                class="purple">{{isLandSuccessful(data)}}</span>
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+
+            <ng-template #showNoData>
+                <div class="col-3 col-s-6 card dFlex">
+                    <h3 class="bold purple">No data found</h3>
+                </div>
+            </ng-template>
+        </div>
+
+    </section>
+    <app-footer></app-footer>
+</div>
