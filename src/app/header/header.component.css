@@ -1,0 +1,18 @@
+h1 {
+  margin: 15px 0px;
+  font-size: 36px;
+}
+
+
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  /* For tablets: */
+  h1 {
+    margin: 15px 50px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* For desktop: */
+  h1 {
+    margin: 15px 50px;
+  }
+}

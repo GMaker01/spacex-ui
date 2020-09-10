@@ -1,0 +1,28 @@
+<div class="col-2 col-s-3 sidebar">
+  <h2>Filters</h2>
+  <div>
+    <p class="title">Launch Year</p>
+    <hr>
+    <div>
+      <a *ngFor="let data of years" class="filter" [ngClass]="{'active' : filters && filters.launch_year === data}"
+        (click)="onFilterChange('launch_year', data)">{{data}}</a>
+    </div>
+  </div>
+
+  <div>
+    <p class="title">Successful Launch</p>
+    <hr>
+
+    <a *ngFor="let data of successfulLaunchOrLanding" class="filter"
+      [ngClass]="{'active' : filters && filters.launch_success === data}"
+      (click)="onFilterChange('launch_success', data)">{{data.toString() | titlecase}}</a>
+  </div>
+
+  <div>
+    <p class="title">Successful Landing</p>
+    <hr>
+    <a *ngFor="let data of successfulLaunchOrLanding" class="filter"
+      [ngClass]="{'active' : filters && filters.land_success === data}"
+      (click)="onFilterChange('land_success', data)">{{data.toString() | titlecase}}</a>
+  </div>
+</div>

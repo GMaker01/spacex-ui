@@ -1,0 +1,63 @@
+h2 {
+  margin-top: 0px;
+  padding: 3% 5%;
+}
+
+.sidebar {
+  float: left;
+  margin: 0px;
+  background-color: #fafafa;
+}
+
+.sidebar .title {
+  text-align: center;
+  font-size: 18px;
+}
+
+.sidebar .filter {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 2% 8%;
+  letter-spacing: 0px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  background: #c5e09b;
+  font-weight: 500;
+  margin: 5% 2%;
+  width: 45%;
+}
+
+.sidebar .filter:hover {
+  background: #7cba01;
+  cursor: pointer;
+}
+
+.sidebar .filter.active {
+  background: #7cba01;
+}
+
+hr {
+  width: 50%;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  /* For tablets: */
+  .sidebar .filter {
+    padding: 8px 17px;
+    margin: 10px 2%;
+    min-width: 70px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* For desktop: */
+  .sidebar {
+    float: left;
+  }
+  .sidebar .filter {
+    padding: 8px 17px;
+    min-width: 70px;
+  }
+}
+
