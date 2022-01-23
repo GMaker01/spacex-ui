@@ -1,9 +1,5 @@
 # A basic redirects rule
 [[redirects]]
-  from = "https://stoic-thompson-eb041f.netlify.app/*"
-  to = "https://sapient.itsshubham.com/:splat"
-  status = 301
-[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
