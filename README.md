@@ -1,6 +1,11 @@
-# Sapient Offline Test
+# SpaceX UI
+This project is a UI prototype made in angular for one of the client. In this project SpaceX open API is used to showcase the rocket launches.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+## Technology Stack
+**Frontend**: Angular 10
+**UI Library**: CSS3
+
+[Site URL](https://stoic-thompson-eb041f.netlify.app "Click here to navigate to Site")
 
 ## Understanding
 
